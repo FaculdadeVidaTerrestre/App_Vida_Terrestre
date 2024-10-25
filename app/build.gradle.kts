@@ -5,7 +5,7 @@ plugins {
 android {
     namespace = "com.example.vidaterrestre"
     compileSdk = 34
-
+ 
     defaultConfig {
         applicationId = "com.example.vidaterrestre"
         minSdk = 24
