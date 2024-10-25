@@ -27,6 +27,14 @@
         <activity android:name=".InterventionProposalsActivity" />
         <activity android:name=".InteractiveTestsActivity" />
         <activity android:name=".MinigameActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBKAc6MFtlnQC3UiT_ehLtArI8_0qI93dE"/>
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
 
 </manifest>
