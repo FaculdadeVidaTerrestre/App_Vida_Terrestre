@@ -27,6 +27,8 @@
         <activity android:name=".InterventionProposalsActivity" />
         <activity android:name=".InteractiveTestsActivity" />
         <activity android:name=".MinigameActivity" />
+        <activity android:name=".StatisticalViewActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBKAc6MFtlnQC3UiT_ehLtArI8_0qI93dE"/>

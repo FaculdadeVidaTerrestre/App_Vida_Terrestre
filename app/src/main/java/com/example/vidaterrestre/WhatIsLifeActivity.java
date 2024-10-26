@@ -1,9 +1,11 @@
 package com.example.vidaterrestre;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
@@ -49,6 +51,12 @@ public class WhatIsLifeActivity extends FragmentActivity implements OnMapReadyCa
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        Button buttonStatView = findViewById(R.id.button_statistical_view);
+        buttonStatView.setOnClickListener(v -> {
+            Intent intent = new Intent(WhatIsLifeActivity.this, StatisticalViewActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override
