@@ -7,7 +7,7 @@
             <size android:width="56dp" android:height="56dp"/>
         </shape>
     </item>
-    <item android:drawable="@drawable/animal_icon"
+    <item android:drawable="@drawable/close_icon"
         android:width="34dp"
         android:height="34dp"
         android:gravity="center"/>
