@@ -34,7 +34,7 @@ public class InterventionProposalsActivity extends AppCompatActivity {
 
         // Configure o RecyclerView
         RecyclerView recyclerViewProposals = findViewById(R.id.recyclerViewProposals); // Certifique-se de que o ID corresponda ao XML
-        ProposalsAdapter adapter = new ProposalsAdapter(proposalsList);
+        ProposalsAdapter adapter = new ProposalsAdapter(proposalsList, this); // Passa a referência da atividade
         recyclerViewProposals.setAdapter(adapter);
         recyclerViewProposals.setLayoutManager(new LinearLayoutManager(this));
 
@@ -47,20 +47,25 @@ public class InterventionProposalsActivity extends AppCompatActivity {
         fabAddProposal.setOnClickListener(v -> showAddProposalDialog());
     }
 
-    private void openInstagramLink() {
-        String instagramPostUrl = "https://www.instagram.com/p/C_yTV9xNZ5A/";
-        Uri uri = Uri.parse(instagramPostUrl);
+    // Método para mostrar os detalhes da proposta
+    public void showProposalDetails(Proposal proposal) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(proposal.getTitle());
+        builder.setMessage(proposal.getDetailedDescription()); // Use a descrição detalhada
+        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+        builder.create().show();
+    }
 
-        // Verifica se o Instagram está instalado
+    private void openInstagramLink() {
+        String instagramPostUrl = "https://www.instagram.com/greenpeacebrasil/";
+        Uri uri = Uri.parse(instagramPostUrl);
         PackageManager packageManager = getPackageManager();
         Intent intent = packageManager.getLaunchIntentForPackage("com.instagram.android");
 
         if (intent != null) {
-            // Instagram está instalado, abre o link no aplicativo
             intent.setData(uri);
             startActivity(intent);
         } else {
-            // Abre o link no navegador se Instagram não está instalado
             intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         }
@@ -86,10 +91,10 @@ public class InterventionProposalsActivity extends AppCompatActivity {
 
     private List<Proposal> getProposals() {
         List<Proposal> proposals = new ArrayList<>();
-        proposals.add(new Proposal("Título 1", "Descrição da proposta 1"));
-        proposals.add(new Proposal("Título 2", "Descrição da proposta 2"));
-        proposals.add(new Proposal("Título 3", "Descrição da proposta 3"));
-        proposals.add(new Proposal("Título 4", "Descrição da proposta 4"));
+        proposals.add(new Proposal("Opinião Por Gustavo Poli", "Uma breve opinião sobre o semestre", "Computabilidade e Complexidade de algoritmos é uma matéria com um professor legal, só que eu não to conseguindo aprender.\n \nComputação Gráfica é uma matéria muito legal só que o método de ensino não me agradou tanto assim, não muito a comentar.\n \nAplicação Para dispositivos móveis é uma matéria interessante mas que o professor não ajuda em nada, aulas paias de mais e com pouca vontade de faze-las"));
+        proposals.add(new Proposal("Título 2", "Descrição breve da proposta 2", "Descrição detalhada da proposta 2."));
+        proposals.add(new Proposal("Título 3", "Descrição breve da proposta 3", "Descrição detalhada da proposta 3."));
+        proposals.add(new Proposal("Título 4", "Descrição breve da proposta 4", "Descrição detalhada da proposta 4."));
         return proposals;
     }
 }
