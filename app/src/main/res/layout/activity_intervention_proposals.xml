@@ -1,0 +1,63 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InterventionProposalsActivity">
+
+    <!-- Layout do Hiperlink com Imagem -->
+    <LinearLayout
+        android:id="@+id/linkContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="ExtraText">
+
+        <!-- Imagem ao lado do link -->
+        <ImageView
+            android:id="@+id/linkImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/greenpeace"
+        android:contentDescription="@string/instagram_link" />
+
+        <!-- Texto do link -->
+        <TextView
+            android:id="@+id/linkText"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Visite o instagram para se informar mais!"
+            android:textColor="@color/verde_floresta"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- RecyclerView para a lista de propostas (resto do layout) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProposals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/linkContainer"
+        app:layout_constraintBottom_toTopOf="@+id/fabAddProposal"
+        tools:listitem="@layout/item_proposal" />
+
+    <!-- Botão de ação flutuante para adicionar proposta -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddProposal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add_proposal"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
