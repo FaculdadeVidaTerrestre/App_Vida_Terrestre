@@ -1,6 +1,5 @@
 package com.example.vidaterrestre;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,8 +31,8 @@ public class InterventionProposalsActivity extends AppCompatActivity {
         List<Proposal> proposalsList = getProposals();
 
         // Configure o RecyclerView
-        RecyclerView recyclerViewProposals = findViewById(R.id.recyclerViewProposals); // Certifique-se de que o ID corresponda ao XML
-        ProposalsAdapter adapter = new ProposalsAdapter(proposalsList, this); // Passa a referência da atividade
+        RecyclerView recyclerViewProposals = findViewById(R.id.recyclerViewProposals);
+        ProposalsAdapter adapter = new ProposalsAdapter(proposalsList, this);
         recyclerViewProposals.setAdapter(adapter);
         recyclerViewProposals.setLayoutManager(new LinearLayoutManager(this));
 
@@ -50,10 +48,32 @@ public class InterventionProposalsActivity extends AppCompatActivity {
     // Método para mostrar os detalhes da proposta
     public void showProposalDetails(Proposal proposal) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(proposal.getTitle());
-        builder.setMessage(proposal.getDetailedDescription()); // Use a descrição detalhada
-        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
-        builder.create().show();
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_proposal_details, null);
+        builder.setView(dialogView);
+
+        // Obtém as referências dos TextViews
+        TextView titleTextView = dialogView.findViewById(R.id.textProposalTitle);
+        TextView briefDescriptionTextView = dialogView.findViewById(R.id.textProposalBriefDescription);
+        TextView detailedDescriptionTextView = dialogView.findViewById(R.id.textProposalDetailedDescription);
+        Button closeButton = dialogView.findViewById(R.id.btnClose);
+
+        // Define o texto nos TextViews
+        titleTextView.setText(proposal.getTitle());
+        briefDescriptionTextView.setText(proposal.getBriefDescription());
+        detailedDescriptionTextView.setText(proposal.getDetailedDescription());
+
+        // Cria o diálogo antes de configurar o botão de fechar
+        AlertDialog dialog = builder.create();
+
+        // Configura o botão de fechar
+        closeButton.setOnClickListener(v -> {
+            // Fecha o diálogo
+            dialog.dismiss();
+        });
+
+        // Mostra o diálogo
+        dialog.show();
     }
 
     private void openInstagramLink() {
@@ -82,8 +102,9 @@ public class InterventionProposalsActivity extends AppCompatActivity {
 
         Button confirmButton = dialogView.findViewById(R.id.btnConfirm);
         confirmButton.setOnClickListener(v -> {
-            Toast.makeText(this, "Tela para submeter proposta", Toast.LENGTH_SHORT).show();
-            // Lógica para abrir a tela de submissão de propostas
+            // Abre a nova tela para submissão da proposta
+            Intent intent = new Intent(this, SubmitProposalActivity.class);
+            startActivity(intent);
         });
 
         builder.create().show();
