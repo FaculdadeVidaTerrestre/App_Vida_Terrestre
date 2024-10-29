@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco_gelo"
+    android:backgroundTint="@color/verde_floresta"
     android:padding="16dp">
 
     <!-- Título do Menu -->
@@ -12,14 +13,14 @@
         android:id="@+id/menuTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Menu Principal"
+        android:textColor="@color/verde_claro"
         android:textSize="32sp"
-        android:textColor="@color/verde_floresta"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Seções do Menu -->
     <Button
@@ -28,13 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/verde_claro"
+        android:padding="16dp"
         android:text="Descubra a Magia da Vida Terrestre!"
         android:textColor="@color/branco_gelo"
         android:textSize="18sp"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/menuTitle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/menuTitle" />
 
     <Button
         android:id="@+id/whyImportantButton"
@@ -42,13 +43,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
+        android:padding="16dp"
         android:text="A Importância Vital da Terra!"
         android:textColor="@color/branco_gelo"
         android:textSize="18sp"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/whatIsLifeButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/whatIsLifeButton" />
 
     <Button
         android:id="@+id/interventionProposalsButton"
@@ -56,13 +57,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
+        android:padding="16dp"
         android:text="Junte-se à Mudança: Propostas Incríveis!"
         android:textColor="@color/branco_gelo"
         android:textSize="18sp"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/whyImportantButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/whyImportantButton" />
 
     <Button
         android:id="@+id/interactiveTestsButton"
@@ -70,13 +71,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
+        android:padding="16dp"
         android:text="Teste Seu Conhecimento!"
         android:textColor="@color/branco_gelo"
         android:textSize="18sp"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/interventionProposalsButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/interventionProposalsButton" />
 
     <Button
         android:id="@+id/minigameButton"
@@ -84,12 +85,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
+        android:padding="16dp"
         android:text="Divirta-se com o Minigame da Natureza!"
         android:textColor="@color/branco_gelo"
         android:textSize="18sp"
-        android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@id/interactiveTestsButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/interactiveTestsButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
