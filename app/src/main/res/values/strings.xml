@@ -2,7 +2,11 @@
     <string name="app_name">vidaterrestre</string>
     <string name="confirmar">Confirmar</string>
     <string name="add_proposal">Adicionar Proposta</string>
+<<<<<<< HEAD
     <string name="instagram_link">Visite o instagram para se informar mais!!</string>
     <string name="close" />
     <string name="fechar">Fechar</string>
+=======
+    <string name="instagram_link">Visite o instagram para se informar mais!</string>
+>>>>>>> parent of ba83da2 (vida_terrestre_proposal_new_activity_java)
 </resources>

@@ -1,9 +1,9 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco_gelo"
     tools:context=".InterventionProposalsActivity">
 
     <!-- Layout do Hiperlink com Imagem -->
@@ -11,13 +11,13 @@
         android:id="@+id/linkContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
         android:orientation="horizontal"
         android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:focusable="true"
         tools:ignore="ExtraText">
 
         <!-- Imagem ao lado do link -->
@@ -25,8 +25,8 @@
             android:id="@+id/linkImage"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:contentDescription="@string/instagram_link"
-            android:src="@drawable/greenpeace" />
+            android:src="@drawable/greenpeace"
+        android:contentDescription="@string/instagram_link" />
 
         <!-- Texto do link -->
         <TextView
@@ -45,8 +45,8 @@
         android:id="@+id/recyclerViewProposals"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/fabAddProposal"
         app:layout_constraintTop_toBottomOf="@id/linkContainer"
+        app:layout_constraintBottom_toTopOf="@+id/fabAddProposal"
         tools:listitem="@layout/item_proposal" />
 
     <!-- Botão de ação flutuante para adicionar proposta -->
@@ -57,7 +57,6 @@
         android:layout_margin="16dp"
         android:contentDescription="@string/add_proposal"
         android:src="@drawable/ic_add"
-        app:backgroundTint="@color/verde_claro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
