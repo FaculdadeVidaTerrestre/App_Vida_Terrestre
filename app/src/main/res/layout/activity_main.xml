@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco_gelo"
+    android:background="@color/verde_floresta"
     android:outlineProvider="none"
     tools:context=".MainActivity">
 
@@ -30,8 +30,8 @@
         android:layout_marginTop="44dp"
         android:gravity="center"
         android:outlineProvider="none"
-        android:text="Bem-vindo ao App Vida Terrestre"
-        android:textColor="@color/verde_floresta"
+        android:text="Bem-vindo ao Animap"
+        android:textColor="@color/branco_gelo"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
