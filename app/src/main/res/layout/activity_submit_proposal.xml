@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubmitProposalActivity">
+    android:background="@color/verde_floresta"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/verde_floresta_escuro"
+        android:hint="Nome"
+        android:textColorHint="@color/cinza_pedregoso" />
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/verde_floresta_escuro"
+        android:hint="Título da Proposta"
+        android:textColorHint="@color/cinza_pedregoso" />
+
+    <EditText
+        android:id="@+id/editTextBriefDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/verde_floresta_escuro"
+        android:hint="Descrição Breve"
+        android:textColorHint="@color/cinza_pedregoso" />
+
+    <EditText
+        android:id="@+id/editTextDetailedDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/verde_floresta_escuro"
+        android:hint="Descrição Detalhada"
+        android:textColorHint="@color/cinza_pedregoso" />
+
+    <!-- TextView para mostrar a contagem de caracteres -->
+    <TextView
+        android:id="@+id/textViewCharCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/cinza_pedregoso"
+        android:text="0/200" /> <!-- Valor inicial -->
+
+    <Button
+        android:id="@+id/btnSubmitProposal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/verde_claro"
+        android:text="Enviar Proposta" />
+</LinearLayout>

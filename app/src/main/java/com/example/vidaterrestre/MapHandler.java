@@ -15,6 +15,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.geojson.GeoJsonFeature;
 import com.google.maps.android.geojson.GeoJsonLayer;
 import com.google.maps.android.geojson.GeoJsonPolygonStyle;
 
@@ -35,6 +36,27 @@ public class MapHandler implements OnMapReadyCallback {
     public void initializeMap(SupportMapFragment mapFragment) {
         mapFragment.getMapAsync(this);
     }
+
+    public void highlightState(String stateName) {
+        if (layer == null) return; // Verifica se a camada foi inicializada
+
+        for (GeoJsonFeature feature : layer.getFeatures()) {
+            // Verifica se a propriedade 'name' do estado corresponde ao nome desejado
+            if (stateName.equalsIgnoreCase(feature.getProperty("name"))) {
+                GeoJsonPolygonStyle highlightedStyle = new GeoJsonPolygonStyle();
+                highlightedStyle.setStrokeColor(Color.RED); // Cor da borda do destaque
+                highlightedStyle.setFillColor(Color.argb(128, 255, 165, 0)); // Cor de preenchimento (meio transparente)
+                highlightedStyle.setStrokeWidth(8);
+                feature.setPolygonStyle(highlightedStyle); // Aplica o estilo de destaque
+            } else {
+                // Reseta o estilo para o padrão se não for o estado destacado
+                GeoJsonPolygonStyle defaultStyle = layer.getDefaultPolygonStyle();
+                feature.setPolygonStyle(defaultStyle);
+            }
+        }
+        layer.addLayerToMap(); // Atualiza a camada no mapa
+    }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -86,7 +108,9 @@ public class MapHandler implements OnMapReadyCallback {
             animator.setDuration(500); // 0.5 segundos
             animator.addUpdateListener(valueAnimator -> {
                 float fraction = valueAnimator.getAnimatedFraction();
-                int alpha = (int) (fillColor & 0xFF * fraction);
+                int alpha = (int) ((fillColor & 0xFF) * fraction); // Corrigido com parênteses
+
+                // Define a cor com o novo valor de alpha e mantém os valores RGB
                 layer.getDefaultPolygonStyle().setFillColor(Color.argb(alpha, 46, 139, 87));
                 layer.addLayerToMap();
             });
@@ -101,6 +125,7 @@ public class MapHandler implements OnMapReadyCallback {
             animator.start();
         }
     }
+
 
     public void clearStateFilter() {
         if (isFilterActive) {

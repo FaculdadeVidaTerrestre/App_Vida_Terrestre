@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/verde_floresta_escuro"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-<<<<<<< HEAD
     <TextView
         android:id="@+id/textProposalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/verde_floresta"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textProposalBriefDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="16sp"
-        android:textColor="@color/verde_floresta"/>
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textProposalDetailedDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="14sp"
-        android:textColor="@color/verde_floresta"/>
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/btnClose"
@@ -34,8 +33,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
-        android:text="@string/fechar" />
+        android:text="Fechar" />
 </LinearLayout>
-=======
-</androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> parent of ba83da2 (vida_terrestre_proposal_new_activity_java)
