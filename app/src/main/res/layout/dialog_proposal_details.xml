@@ -38,5 +38,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
-        android:text="Fechar" />
+        android:text="@string/fechar" />
 </LinearLayout>
