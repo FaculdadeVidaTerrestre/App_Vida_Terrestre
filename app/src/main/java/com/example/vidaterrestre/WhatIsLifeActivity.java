@@ -50,26 +50,41 @@ public class WhatIsLifeActivity extends FragmentActivity {
         toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 toggleButton.setBackgroundResource(R.drawable.button_on);
-                // Lógica para exibir a visualização de animais
+                mapHandler.activateStateFilter();
             } else {
                 toggleButton.setBackgroundResource(R.drawable.button_off);
-                // Lógica para exibir a visualização de árvores
+                mapHandler.clearStateFilter();
             }
         });
 
         Button buttonBack = findViewById(R.id.button_back);
         buttonBack.setOnClickListener(v -> {
             Intent intent = new Intent(WhatIsLifeActivity.this, NextActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
+            finish();
         });
 
         Button buttonFilter = findViewById(R.id.button_filter);
         buttonFilter.setOnClickListener(v -> {
             if (mapHandler != null) {
-                // Abrir o filtro de estados
                 StateFilter stateFilter = new StateFilter(this, mapHandler.getMap());
                 stateFilter.showStateFilterDialog();
+                // Exemplo: Quando um estado é selecionado no filtro
+                String selectedStateId = "ID_DO_ESTADO_SELECIONADO"; // Substitua pelo ID do estado
+                mapHandler.highlightState(selectedStateId); // Chame o método de destaque
             }
         });
     }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(WhatIsLifeActivity.this, NextActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish(); // Finaliza a atividade atual
+    }
+
 }
