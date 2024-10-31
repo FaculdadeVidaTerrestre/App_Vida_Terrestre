@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Texto com o nome e RGM do primeiro aluno -->
+
+    <!-- Imagem do primeiro aluno -->
+
+    <!-- Texto com o nome e RGM do segundo aluno -->
+
+    <!-- Campo para o usuário digitar o nome -->
+
+    <!-- Botão para iniciar o quiz -->
+
+    <!-- Botão para encerrar o quiz -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/buttonEndQuiz"
+            android:layout_width="258dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/verde_claro"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:text="Encerrar Quiz"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.662" />
+
+        <Button
+            android:id="@+id/buttonStartQuiz"
+            android:layout_width="290dp"
+            android:layout_height="71dp"
+            android:backgroundTint="@color/verde_claro"
+            android:enabled="false"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:text="Iniciar Quiz"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.535" />
+
+        <Button
+            android:id="@+id/instructionBtn"
+            android:layout_width="191dp"
+            android:layout_height="49dp"
+            android:backgroundTint="@color/verde_claro"
+            android:text="Intruções"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.923" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="374dp"
+            android:layout_height="79dp"
+            android:gravity="center"
+            android:text="Quiz da Vida Terrestre!"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.11" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

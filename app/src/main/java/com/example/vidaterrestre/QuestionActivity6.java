@@ -1,24 +1,45 @@
 package com.example.vidaterrestre;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.Button;
+import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class QuestionActivity6 extends AppCompatActivity {
+    private RadioGroup radioGroupOptions;
+    private Button buttonAnswer;
+    private int correctAnswerId = R.id.radioOption1; // Defina a resposta correta
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_question6);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        radioGroupOptions = findViewById(R.id.radioGroupOptions);
+        buttonAnswer = findViewById(R.id.buttonAnswer);
+
+        // Recebe a pontuação atual da atividade anterior
+        score = getIntent().getIntExtra("score", 0);
+        String userName = getIntent().getStringExtra("userName");
+
+        radioGroupOptions.setOnCheckedChangeListener((group, checkedId) -> buttonAnswer.setEnabled(true));
+
+        buttonAnswer.setOnClickListener(v -> {
+            int selectedId = radioGroupOptions.getCheckedRadioButtonId();
+
+            // Atualiza a pontuação internamente sem mostrar feedback
+            if (selectedId == correctAnswerId) {
+                score++;
+            }
+
+            // Avança para a próxima atividade de pergunta
+            Intent intent = new Intent(QuestionActivity6.this, QuestionActivity7.class);
+            intent.putExtra("userName", userName); // Passa o nome do usuário
+            intent.putExtra("score", score);       // Passa a pontuação atualizada
+            startActivity(intent);
+            finish();
         });
     }
 }
