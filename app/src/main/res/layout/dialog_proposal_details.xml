@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/branco_gelo"
+    android:background="@color/verde_floresta_escuro"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:ignore="ExtraText">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/textProposalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/verde_floresta"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textProposalBriefDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="16sp"
-        android:textColor="@color/verde_floresta"/>
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textProposalDetailedDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="14sp"
-        android:textColor="@color/verde_floresta"/>
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/btnClose"

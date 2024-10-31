@@ -33,7 +33,7 @@
         android:layout_marginTop="44dp"
         android:gravity="center"
         android:outlineProvider="none"
-        android:text="Bem-vindo ao App Vida Terrestre"
+        android:text="Bem-vindo ao Animap"
         android:textColor="@color/branco_gelo"
         android:textSize="24sp"
         android:textStyle="bold|italic"

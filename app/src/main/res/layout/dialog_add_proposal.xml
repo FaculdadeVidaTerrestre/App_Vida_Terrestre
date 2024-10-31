@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/branco_gelo"
+    android:background="@color/verde_floresta_escuro"
     android:orientation="vertical"
     android:padding="24dp">
 
@@ -10,8 +10,7 @@
         android:id="@+id/textMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="@color/verde_floresta" />
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/btnConfirm"
@@ -19,6 +18,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:backgroundTint="@color/verde_claro"
-        android:text="@string/confirmar"
-        android:textColor="@color/verde_floresta" />
+        android:text="@string/confirmar" />
 </LinearLayout>

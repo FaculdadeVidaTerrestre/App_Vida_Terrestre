@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco_gelo"
+    android:background="@color/verde_floresta"
     tools:context=".InterventionProposalsActivity">
 
     <!-- Layout do Hiperlink com Imagem -->
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Visite o instagram para se informar mais!"
-            android:textColor="@color/verde_floresta"
+            android:textColor="@color/verde_claro"
             android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>

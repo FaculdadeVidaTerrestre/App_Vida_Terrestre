@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/branco_gelo"
+    android:background="@color/verde_floresta_escuro"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -18,7 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textSize="16sp"
-        android:textColor="@color/black" />
+        android:textSize="16sp" />
 
 </LinearLayout>

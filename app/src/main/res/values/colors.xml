@@ -6,6 +6,7 @@
     <color name="amarelo_sol">#FFD700</color>
     <color name="cinza_pedregoso">#A9A9A9</color>
     <color name="branco_gelo">#F0F8FF</color>
+    <color name="verde_floresta_escuro">#21663E</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 </resources>
