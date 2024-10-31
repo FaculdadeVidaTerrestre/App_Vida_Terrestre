@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,17 +15,52 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vidaterrestre"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Instructions"
+            android:exported="false" />
+        <activity
+            android:name=".RankingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity10"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity9"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity8"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity7"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionActivity"
+            android:exported="false" />
         <activity android:name=".NextActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".WhatIsLifeActivity" />
         <activity android:name=".WhyImportantActivity" />
         <activity android:name=".InterventionProposalsActivity" />
@@ -31,13 +69,9 @@
         <activity android:name=".StatisticalViewActivity" />
         <activity android:name=".JaguarInfoActivity" />
         <activity android:name=".SubmitProposalActivity" /> <!-- Adicionada aqui -->
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBKAc6MFtlnQC3UiT_ehLtArI8_0qI93dE"/>
+            android:value="AIzaSyBKAc6MFtlnQC3UiT_ehLtArI8_0qI93dE" />
     </application>
-
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 </manifest>
