@@ -68,7 +68,9 @@
         <activity android:name=".MinigameActivity" />
         <activity android:name=".StatisticalViewActivity" />
         <activity android:name=".JaguarInfoActivity" />
-        <activity android:name=".SubmitProposalActivity" /> <!-- Adicionada aqui -->
+        <activity android:name=".SubmitProposalActivity" />
+        <activity android:name=".AiActivity" />
+        <activity android:name=".ChatAdapter" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBKAc6MFtlnQC3UiT_ehLtArI8_0qI93dE" />
