@@ -17,6 +17,7 @@ public class NextActivity extends AppCompatActivity {
         Button interventionProposalsButton = findViewById(R.id.interventionProposalsButton);
         Button interactiveTestsButton = findViewById(R.id.interactiveTestsButton);
         Button minigameButton = findViewById(R.id.minigameButton);
+        Button buttonAi = findViewById(R.id.buttonAi);
 
         // Configurar os listeners para cada botão
         whatIsLifeButton.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +61,15 @@ public class NextActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Inicie a tela do Minigame
                 Intent intent = new Intent(NextActivity.this, MinigameActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonAi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Inicie a tela do Minigame
+                Intent intent = new Intent(NextActivity.this, AiActivity.class);
                 startActivity(intent);
             }
         });
