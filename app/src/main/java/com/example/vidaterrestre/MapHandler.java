@@ -6,7 +6,6 @@ import android.graphics.Color;
 
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.vidaterrestre.JaguarInfoActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -22,7 +21,7 @@ import com.google.maps.android.geojson.GeoJsonPolygonStyle;
 import org.json.JSONException;
 
 import java.io.IOException;
-import java.util.logging.Handler;
+
 public class MapHandler implements OnMapReadyCallback {
     private GoogleMap mMap;
     private FragmentActivity activity;
@@ -63,6 +62,9 @@ public class MapHandler implements OnMapReadyCallback {
         mMap = googleMap;
         configureMap();
         addJaguarOverlay();
+        addMonkeyOverlay();
+        addAraraOverlay();
+        addTamanduaOverlay();
     }
 
     private void configureMap() {
@@ -82,10 +84,10 @@ public class MapHandler implements OnMapReadyCallback {
     }
 
     private void addJaguarOverlay() {
-        LatLng jaguarLocation = new LatLng(-3.4168, -65.8561);
+        LatLng jaguarLocation = new LatLng(-2.4168, -65.8561);
         GroundOverlayOptions jaguarOverlayOptions = new GroundOverlayOptions()
                 .image(BitmapDescriptorFactory.fromResource(R.drawable.jaguar_icon))
-                .position(jaguarLocation, 400000f, 400000f)
+                .position(jaguarLocation, 250000f, 250000f)
                 .clickable(true);
 
         GroundOverlay jaguarOverlay = mMap.addGroundOverlay(jaguarOverlayOptions);
@@ -93,6 +95,57 @@ public class MapHandler implements OnMapReadyCallback {
         mMap.setOnGroundOverlayClickListener(overlay -> {
             if (overlay.equals(jaguarOverlay)) {
                 Intent intent = new Intent(activity, JaguarInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    private void addMonkeyOverlay() {
+        LatLng monkeyLocation = new LatLng(3.4168, -61.200);
+        GroundOverlayOptions monkeyOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.monkey_icon))
+                .position(monkeyLocation, 250000f, 250000f)
+                .clickable(true);
+
+        GroundOverlay monkeyOverlay = mMap.addGroundOverlay(monkeyOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(monkeyOverlay)) {
+                Intent intent = new Intent(activity, MonkeyInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    private void addAraraOverlay() {
+        LatLng araraLocation = new LatLng(-2.4168, -54.5000);
+        GroundOverlayOptions araraOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.arara_icon))
+                .position(araraLocation, 250000f, 250000f)
+                .clickable(true);
+
+        GroundOverlay araraOverlay = mMap.addGroundOverlay(araraOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(araraOverlay)) {
+                Intent intent = new Intent(activity, AraraInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    private void addTamanduaOverlay() {
+        LatLng tamanduaLocation = new LatLng(1.900, -52.1000);
+        GroundOverlayOptions tamanduaOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.tamandua_icon))
+                .position(tamanduaLocation, 250000f, 250000f)
+                .clickable(true);
+
+        GroundOverlay tamanduaOverlay = mMap.addGroundOverlay(tamanduaOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(tamanduaOverlay)) {
+                Intent intent = new Intent(activity, TamanduaInfoActivity.class);
                 activity.startActivity(intent);
             }
         });
