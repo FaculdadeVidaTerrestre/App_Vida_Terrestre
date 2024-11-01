@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/verde_floresta_escuro"
-    tools:context=".StudentsActivity">
+    tools:context=".Instructions">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -23,95 +23,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Integrantes"
+            android:text="Instruções"
             android:textColor="#FFFFFF"
-            android:textSize="34sp" />
+            android:textSize="48sp" />
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="168dp" />
+            android:layout_height="24dp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Nome do Aluno: Angela Dias Caruso\nRGM: 33245282"
+            android:text="Basta clicar na alternativa que achar correta, e após isso clicar em responder, é simples!"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView17"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nome do Aluno: Eder Nicolau Vargas\nRGM: 29913641"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:layout_height="22dp" />
 
-        <TextView
-            android:id="@+id/textView18"
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nome do Aluno: Fernando Fortunato Sousa\nRGM: 29757924"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:layout_height="463dp"
+            app:srcCompat="@drawable/instruction" />
 
-        <TextView
-            android:id="@+id/textView19"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nome do Aluno: Gustavo Poli de Gois\nRGM: 30032695"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nome do Aluno: Lucas Artoni Alves\nRGM: 30064724"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nome do Aluno: Monica Vieira Salvador\nRGM: 30364272"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nome do Aluno: Nicolas Frutuoso Lima de Souza\nRGM: 31810233"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Nome do Aluno: Raul Nascimento\nRGM: 36255645"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:layout_height="25dp" />
 
         <Button
             android:id="@+id/returnBtn"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
+            android:layout_width="211dp"
+            android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/verde_claro"
             android:text="Voltar"
-            android:textSize="34sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
