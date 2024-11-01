@@ -65,6 +65,9 @@ public class MapHandler implements OnMapReadyCallback {
         addMonkeyOverlay();
         addAraraOverlay();
         addTamanduaOverlay();
+        addCapybaraOverlay();
+        addGatoOverlay();
+        addAntaOverlay();
     }
 
     private void configureMap() {
@@ -83,6 +86,7 @@ public class MapHandler implements OnMapReadyCallback {
         }
     }
 
+    // Amazonas - Animal principal
     private void addJaguarOverlay() {
         LatLng jaguarLocation = new LatLng(-2.4168, -65.8561);
         GroundOverlayOptions jaguarOverlayOptions = new GroundOverlayOptions()
@@ -100,6 +104,79 @@ public class MapHandler implements OnMapReadyCallback {
         });
     }
 
+    // Amazonas - Animal em extinção
+    private void addGatoOverlay() {
+        LatLng gatoLocation = new LatLng(-3.5000, -61.100);
+        GroundOverlayOptions gatoOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.gato_maracaja_icon))
+                .position(gatoLocation, 270000f, 270000f)
+                .clickable(true);
+
+        GroundOverlay gatoOverlay = mMap.addGroundOverlay(gatoOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(gatoOverlay)) {
+                Intent intent = new Intent(activity, GatoMaracajaInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Amazonas - Animal Voador
+    private void addAraraOverlay() {
+        LatLng araraLocation = new LatLng(-6.5000, -66.100);
+        GroundOverlayOptions araraOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.arara_icon))
+                .position(araraLocation, 250000f, 250000f)
+                .clickable(true);
+
+        GroundOverlay araraOverlay = mMap.addGroundOverlay(araraOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(araraOverlay)) {
+                Intent intent = new Intent(activity, AraraInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Rondônia - Animal principal
+    private void addAntaOverlay() {
+        LatLng antaLocation = new LatLng(-11.9000, -61.800);
+        GroundOverlayOptions antaOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.anta_brasileira_icon))
+                .position(antaLocation, 250000f, 250000f)
+                .clickable(true);
+
+        GroundOverlay antaOverlay = mMap.addGroundOverlay(antaOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(antaOverlay)) {
+                Intent intent = new Intent(activity, AntaInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Rondônia - Animal em extinção
+    private void addTamanduaOverlay() {
+        LatLng tamanduaLocation = new LatLng(-9.9000, -63.800);
+        GroundOverlayOptions tamanduaOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.tamandua_icon))
+                .position(tamanduaLocation, 250000f, 250000f)
+                .clickable(true);
+
+        GroundOverlay tamanduaOverlay = mMap.addGroundOverlay(tamanduaOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(tamanduaOverlay)) {
+                Intent intent = new Intent(activity, TamanduaInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Roraima - Principal Animal
     private void addMonkeyOverlay() {
         LatLng monkeyLocation = new LatLng(3.4168, -61.200);
         GroundOverlayOptions monkeyOverlayOptions = new GroundOverlayOptions()
@@ -117,35 +194,19 @@ public class MapHandler implements OnMapReadyCallback {
         });
     }
 
-    private void addAraraOverlay() {
-        LatLng araraLocation = new LatLng(-2.4168, -54.5000);
-        GroundOverlayOptions araraOverlayOptions = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.arara_icon))
-                .position(araraLocation, 250000f, 250000f)
+    // Amapá - Animal Principal
+    private void addCapybaraOverlay() {
+        LatLng capybaraLocation = new LatLng(1.9000, -51.900);
+        GroundOverlayOptions capybaraOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.capivara_icon))
+                .position(capybaraLocation, 230000f, 230000f)
                 .clickable(true);
 
-        GroundOverlay araraOverlay = mMap.addGroundOverlay(araraOverlayOptions);
+        GroundOverlay capybaraOverlay = mMap.addGroundOverlay(capybaraOverlayOptions);
 
         mMap.setOnGroundOverlayClickListener(overlay -> {
-            if (overlay.equals(araraOverlay)) {
-                Intent intent = new Intent(activity, AraraInfoActivity.class);
-                activity.startActivity(intent);
-            }
-        });
-    }
-
-    private void addTamanduaOverlay() {
-        LatLng tamanduaLocation = new LatLng(1.900, -52.1000);
-        GroundOverlayOptions tamanduaOverlayOptions = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.tamandua_icon))
-                .position(tamanduaLocation, 250000f, 250000f)
-                .clickable(true);
-
-        GroundOverlay tamanduaOverlay = mMap.addGroundOverlay(tamanduaOverlayOptions);
-
-        mMap.setOnGroundOverlayClickListener(overlay -> {
-            if (overlay.equals(tamanduaOverlay)) {
-                Intent intent = new Intent(activity, TamanduaInfoActivity.class);
+            if (overlay.equals(capybaraOverlay)) {
+                Intent intent = new Intent(activity, CapybaraInfoActivity.class);
                 activity.startActivity(intent);
             }
         });
