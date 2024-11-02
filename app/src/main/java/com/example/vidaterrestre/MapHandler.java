@@ -68,6 +68,7 @@ public class MapHandler implements OnMapReadyCallback {
         addCapybaraOverlay();
         addGatoOverlay();
         addAntaOverlay();
+        addMacacoOverlay();
     }
 
     private void configureMap() {
@@ -196,10 +197,10 @@ public class MapHandler implements OnMapReadyCallback {
 
     // Amapá - Animal Principal
     private void addCapybaraOverlay() {
-        LatLng capybaraLocation = new LatLng(1.9000, -51.900);
+        LatLng capybaraLocation = new LatLng(1.8000, -51.900);
         GroundOverlayOptions capybaraOverlayOptions = new GroundOverlayOptions()
                 .image(BitmapDescriptorFactory.fromResource(R.drawable.capivara_icon))
-                .position(capybaraLocation, 230000f, 230000f)
+                .position(capybaraLocation, 200000f, 200000f)
                 .clickable(true);
 
         GroundOverlay capybaraOverlay = mMap.addGroundOverlay(capybaraOverlayOptions);
@@ -207,6 +208,24 @@ public class MapHandler implements OnMapReadyCallback {
         mMap.setOnGroundOverlayClickListener(overlay -> {
             if (overlay.equals(capybaraOverlay)) {
                 Intent intent = new Intent(activity, CapybaraInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Amapá - Animal em extinção
+    private void addMacacoOverlay() {
+        LatLng macacoLocation = new LatLng(0.199, -51.950);
+        GroundOverlayOptions macacoOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.macaco_aranha_icon))
+                .position(macacoLocation, 200000f, 200000f)
+                .clickable(true);
+
+        GroundOverlay macacoOverlay = mMap.addGroundOverlay(macacoOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(macacoOverlay)) {
+                Intent intent = new Intent(activity, MacacoInfoActivity.class);
                 activity.startActivity(intent);
             }
         });
