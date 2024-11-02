@@ -74,6 +74,7 @@
         <activity android:name=".TamanduaInfoActivity" />
         <activity android:name=".CapybaraInfoActivity" />
         <activity android:name=".GatoMaracajaInfoActivity" />
+        <activity android:name=".MacacoInfoActivity" />
         <activity android:name=".AntaInfoActivity" />
         <activity android:name=".SubmitProposalActivity" />
         <activity android:name=".AiActivity" />

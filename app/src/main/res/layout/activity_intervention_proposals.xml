@@ -3,53 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verde_floresta"
+    android:background="@color/verde_floresta_escuro"
     tools:context=".InterventionProposalsActivity">
-
-    <!-- Layout do Hiperlink com Imagem -->
-    <LinearLayout
-        android:id="@+id/linkContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ExtraText">
-
-        <!-- Imagem ao lado do link -->
-        <ImageView
-            android:id="@+id/linkImage"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:contentDescription="@string/instagram_link"
-            android:src="@drawable/greenpeace" />
-
-        <!-- Texto do link -->
-        <TextView
-            android:id="@+id/linkText"
-            android:layout_width="246dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Visite o instagram para se informar mais!"
-            android:textColor="@color/verde_claro"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </LinearLayout>
 
     <!-- RecyclerView para a lista de propostas (resto do layout) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProposals"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/fabAddProposal"
-        app:layout_constraintTop_toBottomOf="@id/linkContainer"
-        tools:listitem="@layout/item_proposal" />
+        android:layout_width="411dp"
+        android:layout_height="395dp"
+        app:layout_constraintBottom_toTopOf="@+id/linkContainer1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/item_proposal"
+        tools:ignore="MissingConstraints" />
 
-    <!-- Botão de ação flutuante para adicionar proposta -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddProposal"
         android:layout_width="wrap_content"
@@ -61,4 +29,135 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Layout do Hiperlink com Imagem (1ª instância) -->
+    <LinearLayout
+        android:id="@+id/linkContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/verde_floresta_escuro"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linkContainer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/linkImage1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/instagram_greenpeace"
+            android:src="@drawable/greenpeace"
+            android:background="@drawable/rounded_corners"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/linkText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Visite o Greenpeace para se informar mais!"
+            android:textColor="@color/verde_claro"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Layout do Hiperlink com Imagem (2ª instância) -->
+    <LinearLayout
+        android:id="@+id/linkContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/verde_floresta_escuro"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linkContainer3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/linkImage2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/instagram_greenpeace"
+            android:src="@drawable/fujama"
+            android:background="@drawable/rounded_corners"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/linkText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Visite o Fujama para se informar mais!"
+            android:textColor="@color/verde_claro"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Layout do Hiperlink com Imagem (3ª instância) -->
+    <LinearLayout
+        android:id="@+id/linkContainer3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:background="@color/verde_floresta_escuro"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/linkImage3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/instagram_greenpeace"
+            android:src="@drawable/sosmataatlantica"
+            android:background="@drawable/rounded_corners"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/linkText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Visite o SoS Atlântica para se informar mais!"
+            android:textColor="@color/verde_claro"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="410dp"
+        android:layout_height="61dp"
+        android:background="@color/verde_floresta"
+        android:gravity="center"
+        android:text="Pense Consciente!"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewProposals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/verde_claro"
+        android:text="Voltar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
