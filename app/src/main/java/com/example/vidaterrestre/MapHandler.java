@@ -62,13 +62,17 @@ public class MapHandler implements OnMapReadyCallback {
         mMap = googleMap;
         configureMap();
         addJaguarOverlay();
-        addMonkeyOverlay();
+        addTatuOverlay();
+        addQueixadaOverlay();
         addAraraOverlay();
         addTamanduaOverlay();
         addCapybaraOverlay();
         addGatoOverlay();
         addAntaOverlay();
         addMacacoOverlay();
+        addAranhaOverlay();
+        addLoboOverlay();
+        addAraranjubaOverlay();
     }
 
     private void configureMap() {
@@ -178,18 +182,36 @@ public class MapHandler implements OnMapReadyCallback {
     }
 
     // Roraima - Principal Animal
-    private void addMonkeyOverlay() {
-        LatLng monkeyLocation = new LatLng(3.4168, -61.200);
-        GroundOverlayOptions monkeyOverlayOptions = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.monkey_icon))
-                .position(monkeyLocation, 250000f, 250000f)
+    private void addTatuOverlay() {
+        LatLng tatuLocation = new LatLng(3.0000, -61.200);
+        GroundOverlayOptions tatuOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.tatu_canastra_icon))
+                .position(tatuLocation, 300000f, 300000f)
                 .clickable(true);
 
-        GroundOverlay monkeyOverlay = mMap.addGroundOverlay(monkeyOverlayOptions);
+        GroundOverlay tatuOverlay = mMap.addGroundOverlay(tatuOverlayOptions);
 
         mMap.setOnGroundOverlayClickListener(overlay -> {
-            if (overlay.equals(monkeyOverlay)) {
-                Intent intent = new Intent(activity, MonkeyInfoActivity.class);
+            if (overlay.equals(tatuOverlay)) {
+                Intent intent = new Intent(activity, TatuInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Roraima - Animal em extinção
+    private void addQueixadaOverlay() {
+        LatLng queixadaLocation = new LatLng(0.7500, -61.200);
+        GroundOverlayOptions queixadaOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.queixada_icon))
+                .position(queixadaLocation, 300000f, 300000f)
+                .clickable(true);
+
+        GroundOverlay queixadaOverlay = mMap.addGroundOverlay(queixadaOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(queixadaOverlay)) {
+                Intent intent = new Intent(activity, QueixadaInfoActivity.class);
                 activity.startActivity(intent);
             }
         });
@@ -230,6 +252,61 @@ public class MapHandler implements OnMapReadyCallback {
             }
         });
     }
+
+    // Mato Grosso - Animal principal
+    private void addAranhaOverlay() {
+        LatLng aranhaLocation = new LatLng(-11.5000, -57.800);
+        GroundOverlayOptions aranhaOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.aranha_caranguejeira_icon))
+                .position(aranhaLocation, 450000f, 450000f)
+                .clickable(true);
+
+        GroundOverlay aranhaOverlay = mMap.addGroundOverlay(aranhaOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(aranhaOverlay)) {
+                Intent intent = new Intent(activity, AranhaInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Mato Grosso - Animal em extinção
+    private void addLoboOverlay() {
+        LatLng loboLocation = new LatLng(-14.9000, -55.800);
+        GroundOverlayOptions loboOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.lobo_guara_icon))
+                .position(loboLocation, 300000f, 300000f)
+                .clickable(true);
+
+        GroundOverlay loboOverlay = mMap.addGroundOverlay(loboOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(loboOverlay)) {
+                Intent intent = new Intent(activity, LoboGuaraInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Mato Grosso - Animal voador
+    private void addAraranjubaOverlay() {
+        LatLng araranjubaLocation = new LatLng(-11.9000, -52.900);
+        GroundOverlayOptions araranjubaOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.araranjuba_icon))
+                .position(araranjubaLocation, 300000f, 300000f)
+                .clickable(true);
+
+        GroundOverlay araranjubaOverlay = mMap.addGroundOverlay(araranjubaOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(araranjubaOverlay)) {
+                Intent intent = new Intent(activity, AraranjubaInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
 
     public void activateStateFilter() {
         if (!isFilterActive) {
