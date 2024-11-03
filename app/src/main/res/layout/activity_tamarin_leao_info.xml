@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TamarinLeaoInfoActivity">
+
+    <TextView
+        android:id="@+id/tamarin_desc"
+        android:layout_width="397dp"
+        android:layout_height="109dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="372dp"
+        android:text="Descrição do animal."
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/tamarin_id"
+        android:layout_width="153dp"
+        android:layout_height="158dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="497dp"
+        android:src="@drawable/tamarin_icon" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="665dp"
+        android:text="Voltar" />
+
+    <TextView
+        android:id="@+id/tamarin_title"
+        android:layout_width="343dp"
+        android:layout_height="51dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginBottom="660dp"
+        android:gravity="center"
+        android:text="Informações sobre o Tamarin Leão Bandeira"
+        android:textSize="19sp" />
+</RelativeLayout>

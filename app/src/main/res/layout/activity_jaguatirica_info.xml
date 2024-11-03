@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JaguatiricaInfoActivity">
+
+    <TextView
+        android:id="@+id/jaguatirica_desc"
+        android:layout_width="370dp"
+        android:layout_height="112dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="414dp"
+        android:text="Descrição do animal."
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/jaguatirica_title"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/jaguatirica_id"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="9dp"
+        android:text="Informações da Jaguatirica"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="664dp"
+        android:text="Voltar" />
+
+    <ImageView
+        android:id="@+id/jaguatirica_id"
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="525dp"
+        app:srcCompat="@drawable/jaguatirica_icon" />
+</RelativeLayout>
