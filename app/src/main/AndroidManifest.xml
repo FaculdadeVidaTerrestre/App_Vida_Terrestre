@@ -52,7 +52,9 @@
         <activity
             android:name=".QuestionActivity"
             android:exported="false" />
-        <activity android:name=".NextActivity" />
+        <activity
+            android:name=".NextActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -87,9 +89,32 @@
         <activity android:name=".TatuPebaInfoActivity" />
         <activity android:name=".JacarePantanalInfoActivity" />
         <activity android:name=".MorcegoFrutaInfoActivity" />
+        <activity android:name=".CervoPantanalInfoActivity" />
+        <activity android:name=".JaguarundiInfoActivity" />
+        <activity android:name=".RatoMatoInfoActivity" />
+        <activity android:name=".CachorroMatoInfoActivity" />
+        <activity android:name=".CurioInfoActivity" />
         <activity android:name=".SubmitProposalActivity" />
         <activity android:name=".AiActivity" />
         <activity android:name=".ChatAdapter" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GameOver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
