@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
     tools:context=".RatoMatoInfoActivity">
 
     <ImageView
@@ -24,7 +25,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="17dp"
         android:layout_marginEnd="28dp"
         android:layout_toEndOf="@+id/button_back"
         android:text="Informações do Rato do Mato"
@@ -36,8 +37,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="17dp"
+        android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 
     <TextView

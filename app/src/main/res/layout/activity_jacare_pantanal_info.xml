@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
     tools:context=".JacarePantanalInfoActivity">
 
     <ImageView
@@ -34,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="676dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="690dp"
         android:text="Informações Jacaré do Pantanal"
         android:textSize="20sp" />
 
@@ -45,7 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="319dp"
-        android:layout_marginBottom="665dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="676dp"
+        android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 </RelativeLayout>

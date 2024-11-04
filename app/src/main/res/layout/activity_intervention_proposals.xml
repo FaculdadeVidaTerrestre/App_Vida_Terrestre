@@ -138,6 +138,7 @@
         android:layout_width="410dp"
         android:layout_height="61dp"
         android:background="@color/verde_floresta"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:text="Pense Consciente!"
         android:textColor="#FFFFFF"
