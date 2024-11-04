@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JaguarundiInfoActivity">
+
+    <ImageView
+        android:id="@+id/jaguarundi_id"
+        android:layout_width="169dp"
+        android:layout_height="190dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="503dp"
+        app:srcCompat="@drawable/jaguarundi_icon" />
+
+    <TextView
+        android:id="@+id/jaguarundi_desc"
+        android:layout_width="379dp"
+        android:layout_height="114dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="364dp"
+        android:text="Descrição do animal."
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/jaguarundi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="682dp"
+        android:text="Informações sobre o Jaguarundi"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="323dp"
+        android:layout_marginBottom="669dp"
+        android:text="Button" />
+</RelativeLayout>
