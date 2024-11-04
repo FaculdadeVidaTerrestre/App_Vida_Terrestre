@@ -79,6 +79,11 @@ public class MapHandler implements OnMapReadyCallback {
         addTatuPebaOverlay();
         addJacarePantanalOverlay();
         addMorcegoOverlay();
+        addCervoOverlay();
+        addJaguarundiOverlay();
+        addCachorroOverlay();
+        addRatoOverlay();
+        addCurioOverlay();
     }
 
     private void configureMap() {
@@ -439,10 +444,40 @@ public class MapHandler implements OnMapReadyCallback {
         });
     }
 
-    // Goias - Animal principal
+    // Goias - Cervo do Pantanal - Animal principal
+    private void addCervoOverlay() {
+        LatLng cervoLocation = new LatLng(-14.8000, -49.2000);
+        GroundOverlayOptions cervoOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.cervo_pantanal_icon))
+                .position(cervoLocation, 250000f, 250000f)
+                .clickable(true);
 
-    // Goias - Animal em extinção
+        GroundOverlay cervoOverlay = mMap.addGroundOverlay(cervoOverlayOptions);
 
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(cervoOverlay)) {
+                Intent intent = new Intent(activity, CervoPantanalInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+    // Goias - Jaguarundi - Animal em extinção
+    private void addJaguarundiOverlay() {
+        LatLng jaguarundiLocation = new LatLng(-17.6000, -50.800);
+        GroundOverlayOptions jaguarundiOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.jaguarundi_icon))
+                .position(jaguarundiLocation, 250000f, 250000f)
+                .clickable(true);
+
+        GroundOverlay jaguarundiOverlay = mMap.addGroundOverlay(jaguarundiOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(jaguarundiOverlay)) {
+                Intent intent = new Intent(activity, JaguatiricaInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
     // Mato Grosso do Sul - Animal principal
 
     // Mato Grosso do Sul - Animal em extinção
@@ -467,9 +502,59 @@ public class MapHandler implements OnMapReadyCallback {
     // Bahia - Animal principal
     // Bahia - Animal em extinção
 
-    // Minas Gerais - Animal principal
-    // Minas Gerais - Animal em extinção
-    // Minas Gerais - Animal voador
+    // Minas Gerais - Cachorro-do-Mato - Animal principal
+    private void addCachorroOverlay() {
+        LatLng cachorroLocation = new LatLng(-20.2000, -44.300);
+        GroundOverlayOptions cachorroOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.cachorro_do_mato_icon))
+                .position(cachorroLocation, 300000f, 300000f)
+                .clickable(true);
+
+        GroundOverlay cachorroOverlay = mMap.addGroundOverlay(cachorroOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(cachorroOverlay)) {
+                Intent intent = new Intent(activity, CachorroMatoInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Minas Gerais - Rato-do-Mato - Animal em extinção
+    private void addRatoOverlay() {
+        LatLng ratoLocation = new LatLng(-17.2000, -42.300);
+        GroundOverlayOptions ratoOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.rato_do_mato_icon))
+                .position(ratoLocation, 280000f, 280000f)
+                .clickable(true);
+
+        GroundOverlay ratoOverlay = mMap.addGroundOverlay(ratoOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(ratoOverlay)) {
+                Intent intent = new Intent(activity, RatoMatoInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
+
+    // Minas Gerais - Curió - Animal voador
+    private void addCurioOverlay() {
+        LatLng curioLocation = new LatLng(-17.2000, -45.300);
+        GroundOverlayOptions curioOverlayOptions = new GroundOverlayOptions()
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.curio_icon))
+                .position(curioLocation, 280000f, 280000f)
+                .clickable(true);
+
+        GroundOverlay curioOverlay = mMap.addGroundOverlay(curioOverlayOptions);
+
+        mMap.setOnGroundOverlayClickListener(overlay -> {
+            if (overlay.equals(curioOverlay)) {
+                Intent intent = new Intent(activity, CurioInfoActivity.class);
+                activity.startActivity(intent);
+            }
+        });
+    }
 
     // Espirito Santo - Animal principal
 
