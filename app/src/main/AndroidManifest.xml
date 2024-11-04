@@ -13,87 +13,162 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Vidaterrestre"
-        tools:targetApi="31">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+    tools:targetApi="31">
 
-        <activity
-            android:name=".Instructions"
-            android:exported="false" />
-        <activity
-            android:name=".RankingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity10"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity9"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity8"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity7"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity6"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity5"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity4"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity3"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".QuestionActivity"
-            android:exported="false" />
-        <activity android:name=".NextActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+    <activity
+        android:name=".Instructions"
+        android:exported="false" />
+    <activity
+        android:name=".RankingActivity"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity10"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity9"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity8"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity7"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity6"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity5"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity4"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity3"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity2"
+        android:exported="false" />
+    <activity
+        android:name=".QuestionActivity"
+        android:exported="false" />
+    <activity
+        android:name=".NextActivity"
+        android:exported="false" />
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".WhatIsLifeActivity"
+        android:exported="false" />
+    <activity
+        android:name=".WhyImportantActivity"
+        android:exported="false" />
+    <activity
+        android:name=".InterventionProposalsActivity"
+        android:exported="false" />
+    <activity
+        android:name=".InteractiveTestsActivity"
+        android:exported="false" />
+    <activity
+        android:name=".MinigameActivity"
+        android:exported="false" />
+    <activity
+        android:name=".StatisticalViewActivity"
+        android:exported="false" />
+    <activity
+        android:name=".JaguarInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".TatuInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".QueixadaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".AraraInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".TamanduaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".CapybaraInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".GatoMaracajaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".MacacoInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".AntaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".AranhaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".LoboGuaraInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".AraranjubaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".AriranhaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".JaguatiricaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".HarpiaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".TamarinLeaoInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".TatuPebaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".JacarePantanalInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".MorcegoFrutaInfoActivity"
+        android:exported="false" />
+    <activity
+        android:name=".SubmitProposalActivity"
+        android:exported="false" />
+    <activity
+        android:name=".AiActivity"
+        android:exported="false" />
+    <activity
+        android:name=".ChatAdapter"
+        android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".WhatIsLifeActivity" />
-        <activity android:name=".WhyImportantActivity" />
-        <activity android:name=".InterventionProposalsActivity" />
-        <activity android:name=".InteractiveTestsActivity" />
-        <activity android:name=".MinigameActivity" />
-        <activity android:name=".StatisticalViewActivity" />
-        <activity android:name=".JaguarInfoActivity" />
-        <activity android:name=".TatuInfoActivity" />
-        <activity android:name=".QueixadaInfoActivity" />
-        <activity android:name=".AraraInfoActivity" />
-        <activity android:name=".TamanduaInfoActivity" />
-        <activity android:name=".CapybaraInfoActivity" />
-        <activity android:name=".GatoMaracajaInfoActivity" />
-        <activity android:name=".MacacoInfoActivity" />
-        <activity android:name=".AntaInfoActivity" />
-        <activity android:name=".AranhaInfoActivity" />
-        <activity android:name=".LoboGuaraInfoActivity" />
-        <activity android:name=".AraranjubaInfoActivity" />
-        <activity android:name=".AriranhaInfoActivity" />
-        <activity android:name=".JaguatiricaInfoActivity" />
-        <activity android:name=".HarpiaInfoActivity" />
-        <activity android:name=".TamarinLeaoInfoActivity" />
-        <activity android:name=".TatuPebaInfoActivity" />
-        <activity android:name=".JacarePantanalInfoActivity" />
-        <activity android:name=".MorcegoFrutaInfoActivity" />
-        <activity android:name=".SubmitProposalActivity" />
-        <activity android:name=".AiActivity" />
-        <activity android:name=".ChatAdapter" />
+    <activity
+        android:name=".GameActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBKAc6MFtlnQC3UiT_ehLtArI8_0qI93dE" />
-    </application>
+    <activity
+        android:name=".GameOver"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
-</manifest>
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBKAc6MFtlnQC3UiT_ehLtArI8_0qI93dE" />
+</application>
+
+    </manifest>
