@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
     tools:context=".JaguarundiInfoActivity">
 
     <ImageView
@@ -34,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="682dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="690dp"
         android:text="Informações sobre o Jaguarundi"
         android:textSize="20sp" />
 
@@ -45,7 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="323dp"
-        android:layout_marginBottom="669dp"
-        android:text="Button" />
+        android:layout_marginEnd="321dp"
+        android:layout_marginBottom="678dp"
+        android:backgroundTint="@color/verde_floresta_escuro"
+        android:text="Voltar" />
 </RelativeLayout>

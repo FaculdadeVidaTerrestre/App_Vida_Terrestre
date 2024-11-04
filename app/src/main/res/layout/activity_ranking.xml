@@ -8,12 +8,30 @@
     android:background="@color/verde_floresta">
 
     <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Pontuação"
+        android:textAlignment="center"
+        android:textColor="@color/branco_gelo"
+        android:textSize="48sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="75dp" />
+
+    <TextView
         android:id="@+id/textViewScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textColor="#FFFFFF"
         android:layout_gravity="center_horizontal"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
 
     <Button
         android:id="@+id/buttonRetry"

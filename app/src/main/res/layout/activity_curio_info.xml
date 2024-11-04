@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
     tools:context=".CurioInfoActivity">
 
     <TextView
@@ -47,9 +48,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="313dp"
-        android:layout_marginBottom="665dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="680dp"
+        android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 </RelativeLayout>
