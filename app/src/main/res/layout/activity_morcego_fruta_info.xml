@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
     tools:context=".MorcegoFrutaInfoActivity">
 
     <ImageView
@@ -35,7 +36,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="671dp"
+        android:layout_marginBottom="684dp"
         android:text="Informações sobre o Morcego-de-fruta"
         android:textSize="18sp" />
 
@@ -46,6 +47,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="321dp"
-        android:layout_marginBottom="665dp"
+        android:layout_marginBottom="678dp"
+        android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 </RelativeLayout>
