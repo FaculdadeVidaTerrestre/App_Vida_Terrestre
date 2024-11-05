@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif-medium"
         android:text="Menu Principal"
         android:textColor="@color/verde_claro"
         android:textSize="32sp"

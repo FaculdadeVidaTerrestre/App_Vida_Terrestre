@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/gato_id"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="18dp"
         android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 

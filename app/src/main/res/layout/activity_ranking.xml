@@ -37,17 +37,19 @@
         android:id="@+id/buttonRetry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tentar Novamente"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
-        android:textColor="#FFFFFF"/>
+        android:text="Tentar Novamente"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/buttonMainMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Menu Principal"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/verde_claro"
-        android:textColor="#FFFFFF"/>
+        android:text="Menu Principal"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
 </LinearLayout>
