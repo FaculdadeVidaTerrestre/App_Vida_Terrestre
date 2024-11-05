@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verde_floresta" >
+    android:background="@drawable/gradient_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,23 +14,30 @@
             android:id="@+id/textView7"
             android:layout_width="375dp"
             android:layout_height="84dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="49dp"
             android:fontFamily="sans-serif-medium"
             android:text="Por que a vida terrestre é tão importante?"
             android:textColor="@color/verde_claro"
             android:textSize="34sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="51dp" />
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="382dp"
             android:layout_height="408dp"
+            android:layout_marginBottom="160dp"
             android:fontFamily="sans-serif-condensed"
             android:text="A vida terrestre é importante porque é o fundamento da biodiversidade e dos ecossistemas que sustentam todos os processos naturais essenciais para a sobrevivência do planeta, como a produção de oxigênio, a ciclagem de nutrientes e a regulação do clima. Além disso, a vida na Terra oferece recursos fundamentais, como alimentos, medicamentos e materiais, e desempenha um papel central em nossa cultura, ciência e bem-estar. Sem a vida terrestre, a existência humana e de outras espécies seria impossível!!"
             android:textColor="@color/branco_gelo"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="14dp"
-            tools:layout_editor_absoluteY="177dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>

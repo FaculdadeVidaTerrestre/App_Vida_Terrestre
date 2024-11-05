@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/verde_floresta">
+    android:background="@drawable/gradient_background">
 
     <!-- Espaço flexível para empurrar as alternativas e o botão para baixo -->
 
@@ -36,7 +36,6 @@
             android:id="@+id/radioOption1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Objetivos de guerra"
             android:textColor="#FFFFFF"
@@ -46,7 +45,6 @@
             android:id="@+id/radioOption2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Diretrizes para erradicação da pobreza e proteção do planeta"
             android:textColor="#FFFFFF"
@@ -56,7 +54,6 @@
             android:id="@+id/radioOption3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Estratégias de marketing"
             android:textColor="#FFFFFF"
@@ -66,7 +63,6 @@
             android:id="@+id/radioOption4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Aumentar contagens de desmatamento"
             android:textColor="#FFFFFF"

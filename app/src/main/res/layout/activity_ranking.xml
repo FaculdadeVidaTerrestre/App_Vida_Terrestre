@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/verde_floresta">
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/textView4"
