@@ -18,6 +18,7 @@
         android:id="@+id/logoImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginTop="120dp"
         android:contentDescription="Logo"
         android:src="@drawable/tree_solid"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,12 +35,8 @@
         android:outlineProvider="none"
         android:text="Bem-vindo ao ANIMAP"
         android:textColor="@color/branco_gelo"
-<<<<<<< HEAD
         android:textSize="24sp"
         android:textStyle="bold"
-=======
-        android:textSize="48sp"
->>>>>>> 3c49b59b7a1837553230068ea149fd719682a384
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
