@@ -6,38 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/verde_floresta"
-    tools:context=".MorcegoFrutaInfoActivity">
-
-    <ImageView
-        android:id="@+id/morcego_id"
-        android:layout_width="259dp"
-        android:layout_height="157dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="511dp"
-        app:srcCompat="@drawable/morcego_fruta_icon" />
+    tools:context=".RaposaInfoActivity">
 
     <TextView
-        android:id="@+id/morcego_desc"
-        android:layout_width="386dp"
-        android:layout_height="120dp"
+        android:id="@+id/raposa_desc"
+        android:layout_width="366dp"
+        android:layout_height="142dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="365dp"
         android:text="Descrição do animal."
         android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/morcego_title"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
+    <ImageView
+        android:id="@+id/raposa_id"
+        android:layout_width="192dp"
+        android:layout_height="169dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="684dp"
-        android:text="Informações sobre o Morcego-de-fruta"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="515dp"
+        app:srcCompat="@drawable/raposa_icon" />
+
+    <TextView
+        android:id="@+id/raposa_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="677dp"
+        android:text="Informações sobre a Raposa Campeira"
         android:textSize="18sp" />
 
     <Button
@@ -46,8 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="321dp"
-        android:layout_marginBottom="678dp"
+        android:layout_marginEnd="316dp"
+        android:layout_marginBottom="666dp"
         android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 </RelativeLayout>

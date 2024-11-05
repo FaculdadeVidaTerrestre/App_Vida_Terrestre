@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
     tools:context=".HarpiaInfoActivity">
 
     <TextView
@@ -46,6 +47,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="318dp"
-        android:layout_marginBottom="667dp"
+        android:layout_marginBottom="677dp"
+        android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 </RelativeLayout>

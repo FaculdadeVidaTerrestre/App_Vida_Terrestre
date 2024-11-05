@@ -68,7 +68,7 @@ public class NextActivity extends AppCompatActivity {
         buttonAi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Inicie a tela do Minigame
+                // Inicie a tela do IA
                 Intent intent = new Intent(NextActivity.this, AiActivity.class);
                 startActivity(intent);
             }

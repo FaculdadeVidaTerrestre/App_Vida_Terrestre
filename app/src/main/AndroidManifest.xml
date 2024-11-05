@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vidaterrestre"
         tools:targetApi="31">
-
+        <activity
+            android:name=".RaposaInfoActivity"
+            android:exported="false" />
         <activity
             android:name=".Instructions"
             android:exported="false" />
@@ -94,6 +96,7 @@
         <activity android:name=".RatoMatoInfoActivity" />
         <activity android:name=".CachorroMatoInfoActivity" />
         <activity android:name=".CurioInfoActivity" />
+        <activity android:name=".VeadoInfoActivity" />
         <activity android:name=".SubmitProposalActivity" />
         <activity android:name=".AiActivity" />
         <activity android:name=".ChatAdapter" />

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
     tools:context=".TatuPebaInfoActivity">
 
     <TextView
@@ -24,8 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="673dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="682dp"
         android:text="Informações do Tatu Peba"
         android:textSize="20sp" />
 
@@ -47,9 +48,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="315dp"
-        android:layout_marginBottom="662dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="313dp"
+        android:layout_marginBottom="675dp"
+        android:backgroundTint="@color/verde_floresta_escuro"
         android:text="Voltar" />
 </RelativeLayout>

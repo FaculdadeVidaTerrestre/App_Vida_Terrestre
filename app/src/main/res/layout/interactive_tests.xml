@@ -77,6 +77,7 @@
             android:id="@+id/textView2"
             android:layout_width="374dp"
             android:layout_height="79dp"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
             android:text="Quiz da Vida Terrestre!"
             android:textColor="#FFFFFF"
