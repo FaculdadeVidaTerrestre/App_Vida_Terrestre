@@ -18,43 +18,43 @@
         android:id="@+id/logoImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="140dp"
         android:contentDescription="Logo"
         android:src="@drawable/tree_solid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="260dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="44dp"
         android:gravity="center"
         android:outlineProvider="none"
-        android:text="Bem-vindo ao ANIMAP"
+        android:text="Bem-vindo ao Animap"
         android:textColor="@color/branco_gelo"
         android:textSize="24sp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="94dp" />
+        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="229dp"
-        android:layout_height="86dp"
-        android:layout_marginBottom="224dp"
-        android:backgroundTint="@color/verde_floresta"
+        android:layout_width="184dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/verde_claro"
         android:text="Começar"
-        android:textColor="@color/verde_claro"
-        android:textSize="34sp"
+        android:textColor="@color/branco_gelo"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

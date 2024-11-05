@@ -3,22 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cinza_pedregoso"
+    android:background="@color/verde_floresta_escuro"
     tools:context=".AiActivity">
 
-    <!-- Input container at the bottom -->
-
+    <!-- Scroll view for chat messages -->
     <ScrollView
         android:id="@+id/chatScrollView"
-        android:layout_width="416dp"
-        android:layout_height="724dp"
-        android:background="@color/cinza_pedregoso"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/verde_floresta"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintBottom_toTopOf="@+id/messageInputContainer">
 
         <LinearLayout
             android:id="@+id/chatContainer"
@@ -28,36 +23,37 @@
             android:padding="16dp" />
     </ScrollView>
 
+    <!-- Input container at the bottom -->
     <LinearLayout
         android:id="@+id/messageInputContainer"
-        android:layout_width="406dp"
-        android:layout_height="76dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <EditText
             android:id="@+id/inputAi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="10"
+            android:layout_weight="1"
             android:background="@drawable/rounded_input_background"
             android:hint="Digite sua pergunta"
-            android:lineSpacingExtra="4dp"
             android:padding="12dp"
             android:textColor="@color/branco_gelo"
             android:textColorHint="@color/branco_gelo"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/verde_floresta_escuro"
+            android:backgroundTint="@color/cinza_pedregoso"
             android:text="Enviar"
-            android:textColor="@color/branco_gelo" />
+            android:textColor="@color/branco_gelo"
+            android:contentDescription="Send message" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

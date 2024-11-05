@@ -27,7 +27,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="515dp"
-        app:srcCompat="@drawable/raposa_icon" />
+        app:srcCompat="@drawable/rato_do_mato_icon" />
 
     <TextView
         android:id="@+id/raposa_title"
