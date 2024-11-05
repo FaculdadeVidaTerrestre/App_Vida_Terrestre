@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
-            android:text="Metas globais para promover a paz"
+            android:text="Aumentar contagens de desmatamento"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 

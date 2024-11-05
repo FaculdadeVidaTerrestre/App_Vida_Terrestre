@@ -64,7 +64,7 @@
             android:layout_width="191dp"
             android:layout_height="49dp"
             android:backgroundTint="@color/verde_claro"
-            android:text="Intruções"
+            android:text="Instruções"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

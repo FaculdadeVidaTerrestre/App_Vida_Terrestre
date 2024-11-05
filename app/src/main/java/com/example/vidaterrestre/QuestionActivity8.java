@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class QuestionActivity8 extends AppCompatActivity {
     private RadioGroup radioGroupOptions;
     private Button buttonAnswer;
-    private int correctAnswerId = R.id.radioOption4; // Defina a resposta correta
+    private int correctAnswerId = R.id.radioOption2; // Defina a resposta correta
     private int score;
 
     @Override
