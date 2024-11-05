@@ -84,8 +84,6 @@ public class MapHandler implements OnMapReadyCallback {
         addCachorroOverlay();
         addRatoOverlay();
         addCurioOverlay();
-        addVeadoOverlay();
-        addRaposaOverlay();
     }
 
     private void configureMap() {
@@ -463,7 +461,6 @@ public class MapHandler implements OnMapReadyCallback {
             }
         });
     }
-
     // Goias - Jaguarundi - Animal em extinção
     private void addJaguarundiOverlay() {
         LatLng jaguarundiLocation = new LatLng(-17.6000, -50.800);
@@ -481,7 +478,6 @@ public class MapHandler implements OnMapReadyCallback {
             }
         });
     }
-
     // Mato Grosso do Sul - Animal principal
 
     // Mato Grosso do Sul - Animal em extinção
@@ -493,41 +489,9 @@ public class MapHandler implements OnMapReadyCallback {
     // Ceará - Animal principal
     // Ceará - Animal em extinção
 
-    // Rio grande do norte - Veado-Catingueiro - Animal principal
-    private void addVeadoOverlay() {
-        LatLng veadoLocation = new LatLng(-5.7000, -36.500);
-        GroundOverlayOptions veadoOverlayOptions = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.veado_icon))
-                .position(veadoLocation, 130000f, 130000f)
-                .clickable(true);
+    // Rio grande do norte - Animal principal
 
-        GroundOverlay veadoOverlay = mMap.addGroundOverlay(veadoOverlayOptions);
-
-        mMap.setOnGroundOverlayClickListener(overlay -> {
-            if (overlay.equals(veadoOverlay)) {
-                Intent intent = new Intent(activity, VeadoInfoActivity.class);
-                activity.startActivity(intent);
-            }
-        });
-    }
-
-    // Paraíba - Raposa-Campeira - Animal principal
-    private void addRaposaOverlay() {
-        LatLng raposaLocation = new LatLng(-7.3500, -36.200);
-        GroundOverlayOptions raposaOverlayOptions = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.raposa_icon))
-                .position(raposaLocation, 130000f, 130000f)
-                .clickable(true);
-
-        GroundOverlay raposaOverlay = mMap.addGroundOverlay(raposaOverlayOptions);
-
-        mMap.setOnGroundOverlayClickListener(overlay -> {
-            if (overlay.equals(raposaOverlay)) {
-                Intent intent = new Intent(activity, RaposaInfoActivity.class);
-                activity.startActivity(intent);
-            }
-        });
-    }
+    // Paraíba - Animal principal
 
     // Pernambuco - Animal principal
 
