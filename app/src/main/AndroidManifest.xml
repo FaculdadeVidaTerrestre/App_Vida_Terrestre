@@ -15,9 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vidaterrestre"
         tools:targetApi="31">
-        <activity
-            android:name=".RaposaInfoActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Instructions"
             android:exported="false" />
@@ -62,6 +60,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -96,10 +95,25 @@
         <activity android:name=".CachorroMatoInfoActivity" />
         <activity android:name=".CurioInfoActivity" />
         <activity android:name=".VeadoInfoActivity" />
+        <activity android:name=".PreaInfoActivity" />
+        <activity android:name=".LagartoInfoActivity" />
+        <activity android:name=".RaposaInfoActivity" />
+        <activity android:name=".PreguicaInfoActivity" />
+        <activity android:name=".MutumInfoActivity" />
+        <activity android:name=".CurrupiaoInfoActivity" />
+        <activity android:name=".CutiaInfoActivity" />
+        <activity android:name=".PapagaioInfoActivity" />
+        <activity android:name=".AndorinhaInfoActivity" />
+        <activity android:name=".IguanaInfoActivity" />
+        <activity android:name=".BeijaFlorInfoActivity" />
+        <activity android:name=".TatuBolaInfoActivity" />
+        <activity android:name=".TucanoInfoActivity" />
+        <activity android:name=".QuatiInfoActivity" />
+        <activity android:name=".MicoPretoInfoActivity" />
         <activity android:name=".SubmitProposalActivity" />
         <activity android:name=".AiActivity" />
         <activity android:name=".ChatAdapter" />
-        <activity android:name="MoreInfoActivity"/>
+        <activity android:name=".MoreInfoActivity" />
         <activity
             android:name=".GameActivity"
             android:exported="true" />
