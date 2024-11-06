@@ -110,6 +110,15 @@
         <activity android:name=".TucanoInfoActivity" />
         <activity android:name=".QuatiInfoActivity" />
         <activity android:name=".MicoPretoInfoActivity" />
+        <activity android:name=".SapoCururuInfoActivity" />
+        <activity android:name=".GuaxinimInfoActivity" />
+        <activity android:name=".MicoEstrelaInfoActivity" />
+        <activity android:name=".CobraCoralInfoActivity" />
+        <activity android:name=".NambuInfoActivity" />
+        <activity android:name=".PacaInfoActivity" />
+        <activity android:name=".PumaInfoActivity" />
+        <activity android:name=".TuiuiuInfoActivity" />
+        <activity android:name=".JabutiInfoActivity" />
         <activity android:name=".SubmitProposalActivity" />
         <activity android:name=".AiActivity" />
         <activity android:name=".ChatAdapter" />
