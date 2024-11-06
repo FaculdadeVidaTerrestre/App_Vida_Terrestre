@@ -1,58 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verde_floresta"
-    tools:context=".AraraInfoActivity">
+    android:background="@color/verde_floresta">
 
-    <TextView
-        android:id="@+id/arara_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_toEndOf="@+id/button_back"
-        android:text="Informações da Arara "
-        android:textSize="20sp" />
+    <!-- Conteúdo Principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/arara_desc"
-        android:layout_width="387dp"
-        android:layout_height="99dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="369dp"
-        android:text="Descrição da Arara, seus habitats e etc"
-        android:textSize="24sp" />
+        <!-- Título da Informação -->
 
-    <ImageView
-        android:id="@+id/arara_id"
-        android:layout_width="266dp"
-        android:layout_height="161dp"
-        android:layout_below="@+id/arara_title"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="505dp"
-        android:src="@drawable/arara_icon" />
+        <!-- Espaço entre título e imagem -->
 
+        <!-- Imagem da Arara -->
+        <TextView
+            android:id="@+id/arara_title"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Informações da Arara"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <ImageView
+            android:id="@+id/arara_id"
+            android:layout_width="379dp"
+            android:layout_height="185dp"
+            android:layout_gravity="center"
+            android:src="@drawable/arara_icon"
+            app:srcCompat="@drawable/araraazul" />
+
+        <!-- Espaço entre imagem e descrição -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- Descrição da Arara -->
+        <TextView
+            android:id="@+id/arara_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:justificationMode="inter_word"
+            android:text=" A arara-azul-grande, também conhecida como arara-azul, é uma das espécies mais emblemáticas e majestosas de aves do Brasil. Ela é famosa por sua plumagem de um azul intenso, tamanho imponente e comportamento social. \n  A arara-azul-grande é uma espécie endêmica das florestas e campos do Brasil, especialmente das regiões do Pantanal e do Cerrado preferindo locais com grandes palmeiras e árvores de grande porte, onde pode se alimentar e descansar. \n A arara-azul-grande está classificada como &quot;Em Perigo Crítico&quot; pela União Internacional para a Conservação da Natureza (IUCN). A espécie enfrentou um declínio dramático no número de indivíduos nas últimas décadas e está em risco de extinção."
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <!-- Espaço para empurrar o conteúdo para cima -->
+    </LinearLayout>
+
+    <!-- Botão de Voltar Fixo -->
     <Button
         android:id="@+id/button_back"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="2dp"
-        android:backgroundTint="@color/verde_floresta_escuro"
-        android:text="Voltar" />
-
-</RelativeLayout>
+        android:layout_height="57dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_claro"
+        android:text="Voltar"
+        android:textColor="#FFFFFF" />
+</FrameLayout>

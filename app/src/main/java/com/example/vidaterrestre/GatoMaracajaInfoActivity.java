@@ -20,7 +20,7 @@ public class GatoMaracajaInfoActivity extends AppCompatActivity {
         Button backButton = findViewById(R.id.button_back);
 
         titleTextView.setText("Informações sobre o Gato Maracajá");
-        imageView.setImageResource(R.drawable.gato_maracaja_icon);
+        imageView.setImageResource(R.drawable.gatomaracaja);
 
         // Botão de voltar
         backButton.setOnClickListener(v -> finish());

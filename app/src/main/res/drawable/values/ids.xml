@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="popupTitle" type="id" />
+    <item name="popupDescription" type="id" />
+    <item name="textDescription" type="id" />
+    <item name="textTitle" type="id" />
+</resources>

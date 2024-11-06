@@ -61,13 +61,13 @@
             android:id="@+id/learn_more_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/verde_claro"
+            android:onClick="onLearnMoreClicked"
+            android:padding="12dp"
             android:text="Saiba Mais"
             android:textColor="@color/white"
-            android:background="@color/amarelo_sol"
-            android:layout_gravity="center_horizontal"
-            android:padding="12dp"
-            android:textStyle="bold"
-            android:onClick="onLearnMoreClicked" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 </ScrollView>

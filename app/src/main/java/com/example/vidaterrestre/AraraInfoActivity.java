@@ -24,7 +24,7 @@ public class AraraInfoActivity extends AppCompatActivity {
         Button backButton = findViewById(R.id.button_back);
 
         titleTextView.setText("Informações sobre a Arara");
-        imageView.setImageResource(R.drawable.arara_icon);
+        imageView.setImageResource(R.drawable.araraazul);
 
         // Botão de voltar
         backButton.setOnClickListener(v -> finish());

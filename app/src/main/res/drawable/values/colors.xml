@@ -1,0 +1,14 @@
+<resources>
+    <color name="verde_floresta">#2E8B57</color>
+    <color name="marrom_terra">#8B4513</color>
+    <color name="azul_agua">#4682B4</color>
+    <color name="azul_escuro">#06344D</color>
+    <color name="verde_claro">#9ACD32</color>
+    <color name="amarelo_sol">#FFD700</color>
+    <color name="cinza_pedregoso">#373737</color>
+    <color name="branco_gelo">#F0F8FF</color>
+    <color name="verde_floresta_escuro">#21663E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="cinza_black">#282828</color>
+</resources>

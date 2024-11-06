@@ -1,61 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verde_floresta"> <!-- Adiciona um fundo escuro e transparente -->
+    android:background="@color/verde_floresta">
 
-    <!-- Botão de Voltar -->
+    <!-- Conteúdo Principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Espaço no topo -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Título da Informação -->
+        <TextView
+            android:id="@+id/jaguar_info_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Informações sobre a Onça"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Espaço entre título e imagem -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+        <!-- Imagem da Onça -->
+        <ImageView
+            android:id="@+id/jaguar_info_image"
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/jaguar_icon"
+            app:srcCompat="@drawable/oncapintada" />
+
+        <!-- Espaço entre imagem e descrição -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- Descrição da Onça -->
+        <TextView
+            android:id="@+id/jaguar_info_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:justificationMode="inter_word"
+            android:text=" A onça-pintada é um grande felino pertencente à família Felidae, conhecido por sua impressionante força, agilidade e características físicas únicas. Com o nome científico Panthera onca, ela é o maior felino das Américas e o terceiro maior do mundo, ficando atrás apenas do tigre e do leão. \n A onça-pintada é encontrada principalmente nas florestas tropicais, como a Amazônia, mas também pode habitar outros tipos de vegetação, como áreas de cerrado, pantanal e até as caatingas. \n A onça-pintada está classificada como &quot;Quase Ameaçada&quot; pela União Internacional para a Conservação da Natureza (IUCN)."
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <!-- Espaço para empurrar o conteúdo para cima -->
+    </LinearLayout>
+
+    <!-- Botão de Voltar Fixo -->
     <Button
         android:id="@+id/button_back"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/jaguar_info_image"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="-3dp"
-        android:background="@drawable/button_close"
-        android:backgroundTint="@color/verde_floresta_escuro" />
-
-    <!-- Título da Informação ao lado do botão de voltar -->
-
-    <!-- Imagem da Onça - aumentada -->
-    <TextView
-        android:id="@+id/jaguar_info_title"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_toEndOf="@id/button_back"
-        android:text="Informações sobre a Onça"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <!-- Descrição da Onça - texto maior -->
-
-    <ImageView
-        android:id="@+id/jaguar_info_image"
-        android:layout_width="74dp"
-        android:layout_height="84dp"
-        android:layout_below="@id/jaguar_info_title"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="175dp"
-        android:src="@drawable/jaguar_icon" />
-
-    <TextView
-        android:id="@+id/jaguar_info_description"
-        android:layout_width="388dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/jaguar_info_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:text="Descrição completa sobre a onça, seus habitats, status de extinção, etc."
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
-</RelativeLayout>
+        android:layout_height="57dp"
+        android:backgroundTint="@color/verde_claro"
+        android:text="Voltar"
+        android:textColorLink="@color/verde_claro"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp" />
+</FrameLayout>

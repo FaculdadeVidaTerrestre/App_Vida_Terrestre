@@ -50,10 +50,10 @@ public class WhatIsLifeActivity extends FragmentActivity {
         toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 toggleButton.setBackgroundResource(R.drawable.button_on);
-                mapHandler.activateStateFilter();
+                //mapHandler.activateStateFilter();
             } else {
                 toggleButton.setBackgroundResource(R.drawable.button_off);
-                mapHandler.clearStateFilter();
+                //mapHandler.clearStateFilter();
             }
         });
 

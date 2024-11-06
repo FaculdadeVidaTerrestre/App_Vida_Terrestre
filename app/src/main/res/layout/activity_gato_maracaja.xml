@@ -1,53 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verde_floresta"
-    tools:context=".GatoMaracajaInfoActivity">
+    android:background="@color/verde_floresta">
 
-    <TextView
-        android:id="@+id/gato_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="88dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="415dp"
-        android:text="Descrição do animal."
-        android:textSize="24sp" />
+    <!-- Conteúdo Principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/gato_title"
-        android:layout_width="290dp"
-        android:layout_height="29dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="25dp"
-        android:layout_toEndOf="@+id/button_back"
-        android:text="Informações sobre o Gato Maracajá"
-        android:textSize="16sp" />
+        <!-- Título da Informação -->
+        <TextView
+            android:id="@+id/gato_title"
+            android:layout_width="379dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Informações sobre o Gato Maracajá"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
+        <!-- Espaço entre título e imagem -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <!-- Imagem do Gato Maracajá -->
+        <ImageView
+            android:id="@+id/gato_id"
+            android:layout_width="wrap_content"
+            android:layout_height="195dp"
+            android:layout_gravity="center"
+            android:src="@drawable/gato_maracaja_icon"
+            app:srcCompat="@drawable/gatomaracaja" />
+
+        <!-- Espaço entre imagem e descrição -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- Descrição do Gato Maracajá -->
+        <TextView
+            android:id="@+id/gato_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:justificationMode="inter_word"
+            android:text=" O gato-maracajá, também conhecido como gato-do-mato-pequeno, é um felino de porte médio da família Felidae e do gênero Leopardus, ele é conhecido por sua pelagem manchada e habilidades de caça. \n O gato-maracajá é encontrado em florestas tropicais e subtropicais da América Central e América do Sul, habitando florestas densas, como a Amazônia, mas também pode ser encontrado em áreas de floresta secas e florestas de montanha, desde que exista uma boa cobertura vegetal e fontes de alimento abundantes. \n O gato-maracajá está classificado como &quot;Quase Ameaçado&quot; pela União Internacional para a Conservação da Natureza (IUCN). "
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <!-- Espaço para empurrar o conteúdo para cima -->
+    </LinearLayout>
+
+    <!-- Botão de Voltar Fixo -->
     <Button
         android:id="@+id/button_back"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/gato_id"
-        android:layout_marginBottom="18dp"
-        android:backgroundTint="@color/verde_floresta_escuro"
-        android:text="Voltar" />
-
-    <ImageView
-        android:id="@+id/gato_id"
-        android:layout_width="152dp"
-        android:layout_height="133dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="526dp"
-        app:srcCompat="@drawable/gato_maracaja_icon" />
-</RelativeLayout>
+        android:layout_height="57dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_claro"
+        android:text="Voltar"
+        android:textColor="#FFFFFF" />
+</FrameLayout>

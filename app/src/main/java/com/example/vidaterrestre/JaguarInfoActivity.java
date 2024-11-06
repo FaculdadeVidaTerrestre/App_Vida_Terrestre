@@ -17,13 +17,11 @@ public class JaguarInfoActivity extends AppCompatActivity {
         // Referências para os elementos da UI
         TextView titleTextView = findViewById(R.id.jaguar_info_title);
         ImageView imageView = findViewById(R.id.jaguar_info_image);
-        TextView descriptionTextView = findViewById(R.id.jaguar_info_description);
         Button backButton = findViewById(R.id.button_back);
 
         // Definindo informações da onça
         titleTextView.setText("Informações sobre a Onça");
-        imageView.setImageResource(R.drawable.jaguar_icon); // Defina a imagem da onça
-        descriptionTextView.setText("Descrição completa sobre a onça, seus habitats, status de extinção, etc.");
+        imageView.setImageResource(R.drawable.oncapintada); // Defina a imagem da onça
 
         // Botão de voltar
         backButton.setOnClickListener(v -> finish());
