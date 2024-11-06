@@ -1,55 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/verde_floresta"
     android:padding="16dp">
+
+    <!-- Botão de Voltar -->
 
     <TextView
         android:id="@+id/title_statistics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
         android:text="Estatísticas da Vida Terrestre"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"/>
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button_filter_statistics"
+    <TextView
+        android:id="@+id/title_species_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title_statistics"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_filter"
-        android:text="Filtro"
-        android:layout_marginTop="16dp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Contagem de Espécies em Extinção"
+        android:textColor="@color/branco_gelo"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
+    <!-- Título Principal -->
+
+    <!-- Subtítulo -->
+
+    <!-- Container para Gráfico e Informações -->
+
+    <!-- Subtítulo do Gráfico de Pizza -->
     <LinearLayout
-        android:id="@+id/statistics_filter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/button_filter_statistics"
-        android:orientation="vertical"
-        android:visibility="gone"> <!-- Inicialmente escondido -->
+        android:layout_height="228dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Estados"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+        <!-- Imagem do Gráfico à Esquerda -->
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/faun_flora_new" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Animais"
-            android:layout_marginStart="16dp"/>
+        <!-- Informações à Direita do Gráfico -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Arvores"
-            android:layout_marginStart="16dp"/>
+            <!-- Dados Estatísticos da Flora -->
+            <TextView
+                android:id="@+id/statistics_flora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/cinza_pedregoso"
+                android:padding="8dp"
+                android:text="Flora em Risco: 2113 espécies\n- 26 biomas\n- 1654 espécies exclusivas do Brasil"
+                android:textColor="@color/verde_claro"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
+            <!-- Dados Estatísticos da Fauna -->
+            <TextView
+                android:id="@+id/statistics_fauna"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:background="@color/cinza_pedregoso"
+                android:padding="8dp"
+                android:text="Fauna em Risco: 1173 espécies\n- 32 biomas\n- 920 espécies exclusivas do Brasil"
+                android:textColor="@color/azul_agua"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_species_count3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Contagem de Ocorrências por Estados"
+        android:textColor="@color/branco_gelo"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Gráfico de Pizza Centralizado -->
+
+    <!-- Informação sobre a Ocorrência de Espécies -->
+    <ImageView
+        android:id="@+id/imageView_second_graph"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/pizza_count_maiores_estados_ocorrencias" />
+
+    <TextView
+        android:id="@+id/statistics_flora2"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cinza_pedregoso"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Percebemos que há muitas ocorrências de espécies em extinção nos principais e maiores estados"
+        android:textColor="@color/verde_claro"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Fonte da Referência -->
+
+    <TextView
+        android:id="@+id/fonte_referencia"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Fonte: https://dados.mma.gov.br/dataset/especies-ameacadas/resource/1f13b062-f3f6-4198-a4c5-3581548bebec?inner_span=True"
+        android:textColor="@color/branco_gelo"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/verde_floresta_escuro"
+        android:text="Voltar"
+        android:textColor="@color/branco_gelo" />
+
+</LinearLayout>

@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verde_floresta"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title_more_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saiba Mais Sobre a Importância da Vida Terrestre"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"
+            android:textStyle="bold"/>
+
+        <!-- Texto explicativo -->
+        <TextView
+            android:id="@+id/details_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A vida terrestre é um dos pilares essenciais para o equilíbrio ecológico do nosso planeta. As plantas e animais desempenham papéis vitais em diversos processos naturais, como polinização, controle de pragas e manutenção da fertilidade do solo. Além disso, a biodiversidade oferece recursos essenciais para a medicina, alimentação e muitos outros aspectos da nossa vida."
+            android:textSize="16sp"
+            android:textColor="@color/branco_gelo"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="6dp"
+            android:padding="8dp"/>
+
+        <!-- Imagem ilustrativa -->
+        <ImageView
+            android:id="@+id/image_more_info"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/imagem_saiba_mais"
+            android:contentDescription="Imagem ilustrativa sobre a vida terrestre"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Texto sobre impactos da perda de biodiversidade -->
+        <TextView
+            android:id="@+id/impact_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A perda de biodiversidade tem impactos diretos sobre os ecossistemas e, consequentemente, sobre a nossa própria qualidade de vida. Espécies que desaparecem podem afetar a cadeia alimentar, o clima e até mesmo a qualidade da água e do ar."
+            android:textSize="16sp"
+            android:textColor="@color/branco_gelo"
+            android:layout_marginBottom="20dp"
+            android:lineSpacingExtra="6dp"
+            android:padding="8dp"/>
+
+        <!-- Botão de interação -->
+        <Button
+            android:id="@+id/learn_more_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saiba Mais"
+            android:textColor="@color/white"
+            android:background="@color/amarelo_sol"
+            android:layout_gravity="center_horizontal"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:onClick="onLearnMoreClicked" />
+
+    </LinearLayout>
+</ScrollView>

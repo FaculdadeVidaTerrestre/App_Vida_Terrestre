@@ -1,35 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verde_floresta" >
+    android:background="@color/verde_floresta"
+    tools:context=".WhyImportantActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- ScrollView para permitir rolagem do conteúdo -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="375dp"
-            android:layout_height="84dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Por que a vida terrestre é tão importante?"
-            android:textColor="@color/verde_claro"
-            android:textSize="34sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="51dp" />
+        <!-- LinearLayout vertical para organizar conteúdo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="382dp"
-            android:layout_height="408dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="A vida terrestre é importante porque é o fundamento da biodiversidade e dos ecossistemas que sustentam todos os processos naturais essenciais para a sobrevivência do planeta, como a produção de oxigênio, a ciclagem de nutrientes e a regulação do clima. Além disso, a vida na Terra oferece recursos fundamentais, como alimentos, medicamentos e materiais, e desempenha um papel central em nossa cultura, ciência e bem-estar. Sem a vida terrestre, a existência humana e de outras espécies seria impossível!!"
-            android:textColor="@color/branco_gelo"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="14dp"
-            tools:layout_editor_absoluteY="177dp" />
+            <!-- Título Principal -->
+            <TextView
+                android:id="@+id/title_importance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A Importância da Vida Terrestre"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</RelativeLayout>
+            <!-- Subtítulo Explicativo -->
+            <TextView
+                android:id="@+id/importance_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A vida terrestre é fundamental para a manutenção dos ecossistemas, equilíbrio climático e da biodiversidade. Vamos entender sua importância!"
+                android:textSize="16sp"
+                android:textColor="@color/branco_gelo"
+                android:layout_marginBottom="20dp"
+                android:padding="8dp"/>
+
+            <!-- Imagem Representando a Vida Terrestre -->
+            <ImageView
+                android:id="@+id/image_importance"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/vida_animal_ia"
+                android:contentDescription="Ilustração sobre a importância da vida terrestre"
+                android:layout_marginBottom="20dp"
+                android:scaleType="centerCrop"/>
+
+            <!-- Texto Explicativo sobre Importância -->
+            <TextView
+                android:id="@+id/importance_text_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A vida terrestre engloba uma infinidade de organismos e ecossistemas, que são interdependentes. As florestas tropicais, por exemplo, produzem oxigênio e abrigam uma biodiversidade rica que é essencial para o equilíbrio ecológico global."
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"/>
+
+            <!-- Mais Informações -->
+            <TextView
+                android:id="@+id/importance_text_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Além disso, a vida terrestre desempenha um papel crucial na manutenção dos recursos naturais que são vitais para nossa sobrevivência, como água, alimentos e materiais para construção. Sua preservação é um dos maiores desafios do século XXI."
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"/>
+
+            <!-- Botão para Mais Informações -->
+            <Button
+                android:id="@+id/btn_more_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/verde_floresta_escuro"
+                android:padding="12dp"
+                android:text="Saiba Mais"
+                android:textColor="@color/branco_gelo" />
+
+            <!-- Rodapé com fonte de referência -->
+            <TextView
+                android:id="@+id/reference_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fonte: Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA)"
+                android:textSize="12sp"
+                android:textColor="@color/branco_gelo"
+                android:gravity="center"
+                android:layout_marginTop="30dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
