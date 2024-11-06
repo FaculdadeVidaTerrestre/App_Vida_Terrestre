@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/gradient_background">
+    android:background="@color/verde_floresta">
 
     <!-- Espaço flexível para empurrar as alternativas e o botão para baixo -->
 
@@ -36,6 +36,7 @@
             android:id="@+id/radioOption1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Uma espécie que vive em zoológicos"
             android:textColor="#FFFFFF"
@@ -45,6 +46,7 @@
             android:id="@+id/radioOption2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Uma espécie cuja população está diminuindo rapidamente e pode desaparecer"
             android:textColor="#FFFFFF"
@@ -54,6 +56,7 @@
             android:id="@+id/radioOption3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Uma espécie que é muito comum"
             android:textColor="#FFFFFF"
@@ -63,6 +66,7 @@
             android:id="@+id/radioOption4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Uma espécie que é domesticada"
             android:textColor="#FFFFFF"

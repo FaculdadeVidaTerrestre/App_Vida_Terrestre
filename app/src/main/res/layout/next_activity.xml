@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@color/branco_gelo"
+    android:backgroundTint="@color/verde_floresta"
     android:padding="16dp">
 
     <!-- Título do Menu -->
@@ -17,7 +18,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-medium"
         android:text="Menu Principal"
-        android:textColor="@color/branco_gelo"
+        android:textColor="@color/verde_claro"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,5 +106,12 @@
         android:textColor="@color/branco_gelo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="152dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-14dp"
+        tools:layout_editor_absoluteY="479dp"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

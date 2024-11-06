@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/gradient_background">
+    android:background="@color/verde_floresta">
 
     <!-- Espaço flexível para empurrar as alternativas e o botão para baixo -->
 
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="monospace"
             android:text="1) Qual dessas práticas é considerada ilegal no Brasil?"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
@@ -37,6 +37,7 @@
             android:id="@+id/radioOption1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Pesca esportiva"
             android:textColor="#FFFFFF"
@@ -46,6 +47,7 @@
             android:id="@+id/radioOption2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Caça de animais silvestres"
             android:textColor="#FFFFFF"
@@ -55,6 +57,7 @@
             android:id="@+id/radioOption3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Observação de pássaros"
             android:textColor="#FFFFFF"
@@ -64,6 +67,7 @@
             android:id="@+id/radioOption4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/verde_floresta"
             android:buttonTint="#FFFFFF"
             android:text="Criar peixes em aquários"
             android:textColor="#FFFFFF"
